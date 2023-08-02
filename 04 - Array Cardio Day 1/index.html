@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Cardio Day 1 💪</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+  </head>
+  <body>
+    <div class="social-container">
+      <div class="up">
+        <button class="card1"><span>Follow</span></button>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/iosebkhe/"
+          class="card2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            class="linkedin"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <div class="down">
+        <a target="_blank" href="https://github.com/iosebkhe" class="card3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            width="30"
+            height="30"
+            class="github"
+          >
+            <path
+              d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+            ></path>
+          </svg>
+        </a>
+        <button class="card4"><span>Me</span></button>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <h1 class="heading">
+        Psst: have a look at the JavaScript Console <span>💁</span>
+      </h1>
+      <div class="code-wrapper">
+        <div class="code-block">
+          <pre>
+          <code class="language-javascript">
+<!-- prettier-ignore -->
+// ## Array Cardio Day 1
+
+// Some data we can work with
+
+const inventors = [
+  { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
+  { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
+  { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
+  { first: "Marie", last: "Curie", year: 1867, passed: 1934 },
+  { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
+  { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
+  { first: "Max", last: "Planck", year: 1858, passed: 1947 },
+  { first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 },
+  { first: "Ada", last: "Lovelace", year: 1815, passed: 1852 },
+  { first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 },
+  { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
+  { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 },
+];
+
+const people = [
+  "Bernhard, Sandra",
+  "Bethea, Erin",
+  "Becker, Carl",
+  "Bentsen, Lloyd",
+  "Beckett, Samuel",
+  "Blake, William",
+  "Berger, Ric",
+  "Beddoes, Mick",
+  "Beethoven, Ludwig",
+  "Belloc, Hilaire",
+  "Begin, Menachem",
+  "Bellow, Saul",
+  "Benchley, Robert",
+  "Blair, Robert",
+  "Benenson, Peter",
+  "Benjamin, Walter",
+  "Berlin, Irving",
+  "Benn, Tony",
+  "Benson, Leana",
+  "Bent, Silas",
+  "Berle, Milton",
+  "Berry, Halle",
+  "Biko, Steve",
+  "Beck, Glenn",
+  "Bergman, Ingmar",
+  "Black, Elk",
+  "Berio, Luciano",
+  "Berne, Eric",
+  "Berra, Yogi",
+  "Berry, Wendell",
+  "Bevan, Aneurin",
+  "Ben-Gurion, David",
+  "Bevel, Ken",
+  "Biden, Joseph",
+  "Bennington, Chester",
+  "Bierce, Ambrose",
+  "Billings, Josh",
+  "Birrell, Augustine",
+  "Blair, Tony",
+  "Beecher, Henry",
+  "Biondo, Frank",
+];
+
+// Array.prototype.filter()
+// 1. Filter the list of inventors for those who were born in the 1500's
+const inventor1500 = inventors.filter(
+  (inventor) => inventor.year >= 1500 && inventor.year < 1600
+);
+console.log(
+  "== Filter the list of inventors for those who were born in the 1500's"
+);
+console.table(inventor1500);
+
+// Array.prototype.map()
+// 2. Give us an array of the inventors first and last names
+const inventorsFullNames = inventors.map(
+  (inventor) => `${inventor.first} ${inventor.last}`
+);
+console.log("== Give us an array of the inventors first and last names");
+console.log(inventorsFullNames);
+
+// Array.prototype.sort()
+// 3. Sort the inventors by birth date, oldest to youngest
+const sortBirthDates = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+console.log("== Sort the inventors by birth date, oldest to youngest");
+console.table(sortBirthDates);
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live all together?
+const inventorsTotalYearsSum = inventors.reduce(
+  (total, inventor) => total + (inventor.passed - inventor.year),
+  0
+);
+console.log("== How many years did all the inventors live all together?");
+console.log(inventorsTotalYearsSum);
+
+// 5. Sort the inventors by years lived
+const inventorsLifeYears = inventors.sort((a, b) => {
+  const last = a.passed - a.year;
+  const next = b.passed - b.year;
+  return last > next ? -1 : 1;
+});
+console.log("== Sort the inventors by years lived");
+console.table(inventorsLifeYears);
+
+// 6. sort Exercise
+// Sort the people alphabetically by last name
+const splitPeople = people.sort((last, next) => {
+  return last > next ? 1 : -1;
+});
+console.log("== Sort the people alphabetically by last name");
+console.table(splitPeople);
+
+// 7. Reduce Exercise
+// Sum up the instances of each of these
+const data = [
+  "car",
+  "car",
+  "truck",
+  "truck",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "car",
+  "truck",
+];
+
+const itemsCount = data.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.log("== Sum up the instances of each of these");
+console.log(itemsCount);
+            </code>
+          </pre>
+        </div>
+        <button class="scroll">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+            class="arrow-down"
+          >
+            <path
+              d="M202.83,146.83l-72,72a4,4,0,0,1-5.66,0l-72-72a4,4,0,0,1,5.66-5.66L124,206.34V40a4,4,0,0,1,8,0V206.34l65.17-65.17a4,4,0,0,1,5.66,5.66Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <img src="./giphy.webp" alt="" />
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+    <script>
+      Prism.highlightAll();
+    </script>
+  </body>
+</html>

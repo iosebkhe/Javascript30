@@ -1,0 +1,282 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive, sans-serif;
+  height: 100vh;
+  font-size: 1.6rem;
+  background: #1d4350;
+  background: -webkit-linear-gradient(to top, #a43931, #1d4350);
+  background: linear-gradient(to top, #a43931, #1d4350);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  color: white;
+}
+
+nav {
+  position: relative;
+  perspective: 60rem;
+}
+
+.cool > li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cool > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 2rem;
+  top: -2rem;
+  border-radius: 0.2rem;
+  transition: all 200ms;
+  transform: translateY(105px);
+  will-change: opacity;
+  visibility: hidden;
+  pointer-events: none;
+  display: block;
+}
+
+.trigger-enter .dropdown {
+  transition-delay: 180ms;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-background {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  background: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0 5rem 10rem rgba(50, 50, 93, 0.1),
+    0 1.5rem 3.5rem rgba(50, 50, 93, 0.15), 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  transition: all 450ms;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.dropdown-background.open {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bio {
+  min-width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.7;
+}
+
+.bio img {
+  float: left;
+  margin-right: 2rem;
+}
+
+.projects {
+  min-width: 30rem;
+}
+
+.projects li {
+  padding: 1rem 0;
+  display: block;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: orangered;
+}
+
+a.button {
+  background: black;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
+.button[href*="linkedin"] {
+  background: #019fe9;
+}
+.button[href*="github"] {
+  background: black;
+}
+.button[href*="projects"] {
+  background: #1d4350;
+}
+
+/* ///////////////////////////////////// */
+.social-container {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: fit-content;
+  transform: rotate(0) scale(0.6);
+  transition: 600ms ease-in-out;
+}
+
+.social-container:hover {
+  transform: rotate(360deg) scale(1);
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  width: 6.5rem;
+  height: 6.5rem;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0.2rem 0.5rem -0.1rem,
+    rgba(0, 0, 0, 0.3) 0 0.1rem 0.3rem -0.1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.card1,
+.card4 {
+  font-family: cursive;
+  font-size: 1.6rem;
+}
+
+.card1 {
+  border-radius: 9rem 0.5rem 0.5rem 0.5rem;
+}
+
+.card1 > span {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.card2 {
+  border-radius: 0.5rem 9rem 0.5rem 0.5rem;
+}
+
+.card3 {
+  border-radius: 0.5rem 0.5rem 0.5rem 9rem;
+}
+
+.card4 {
+  border-radius: 0.5rem 0.5rem 9rem 0.5rem;
+}
+
+.card4 > span {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linkedin {
+  margin-top: 1.5rem;
+  margin-left: -0.9rem;
+  fill: #00a0dc;
+}
+
+.github {
+  display: block;
+  margin-top: -0.6rem;
+  margin-left: 1.2rem;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  scale: 1.1;
+}
+
+.card1:hover {
+  background-color: #cc39a4;
+  color: white;
+}
+
+.card2:hover {
+  background-color: #0077b5;
+}
+
+.card2:hover .linkedin {
+  fill: white;
+}
+
+.card3:hover {
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  background-color: #8c9eff;
+  color: white;
+}

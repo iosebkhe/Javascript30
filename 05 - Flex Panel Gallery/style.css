@@ -1,0 +1,218 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Amatic SC", cursive;
+  font-weight: 200;
+  position: relative;
+  margin: 0;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  box-shadow: inset 0 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background-image: url("./imgs/climax.jpg");
+}
+.panel2 {
+  background-image: url("./imgs/poh.jpg");
+}
+.panel3 {
+  background-image: url("./imgs/john.jpg");
+}
+.panel4 {
+  background-image: url("./imgs/bb.jpg");
+}
+.panel5 {
+  background-image: url("./imgs/wolf.jpg");
+}
+
+/* Flex Items */
+.panel > * {
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.72), 0 0 1.4rem rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 4rem;
+}
+
+.open-active > *:first-child,
+.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+/* ///////////////////////////////////// */
+.social-container {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: fit-content;
+  transform: rotate(0) scale(0.6);
+  transition: 600ms ease-in-out;
+}
+
+.social-container:hover {
+  transform: rotate(360deg) scale(1);
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  width: 6.5rem;
+  height: 6.5rem;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0.2rem 0.5rem -0.1rem,
+    rgba(0, 0, 0, 0.3) 0 0.1rem 0.3rem -0.1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.card1,
+.card4 {
+  font-family: cursive;
+  font-size: 1.6rem;
+}
+
+.card1 {
+  border-radius: 9rem 0.5rem 0.5rem 0.5rem;
+}
+
+.card1 > span {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.card2 {
+  border-radius: 0.5rem 9rem 0.5rem 0.5rem;
+}
+
+.card3 {
+  border-radius: 0.5rem 0.5rem 0.5rem 9rem;
+}
+
+.card4 {
+  border-radius: 0.5rem 0.5rem 9rem 0.5rem;
+}
+
+.card4 > span {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linkedin {
+  margin-top: 1.5rem;
+  margin-left: -0.9rem;
+  fill: #00a0dc;
+}
+
+.github {
+  display: block;
+  margin-top: -0.6rem;
+  margin-left: 1.2rem;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  scale: 1.1;
+}
+
+.card1:hover {
+  background-color: #cc39a4;
+  color: white;
+}
+
+.card2:hover {
+  background-color: #0077b5;
+}
+
+.card2:hover .linkedin {
+  fill: white;
+}
+
+.card3:hover {
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  background-color: #8c9eff;
+  color: white;
+}

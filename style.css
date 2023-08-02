@@ -1,0 +1,248 @@
+:root {
+  --font-family-main: "Karla", sans-serif;
+  --font-family-secondary: "Merriweather Sans", sans-serif;
+  --body-bg-color: hsl(263, 75%, 87%);
+  --color-accent-hue: 235;
+  --color-accent-sat: 25%;
+  --color-accent-light: 21%;
+  --color-accent: hsl(
+    var(--color-accent-hue),
+    var(--color-accent-sat),
+    var(--color-accent-light)
+  );
+
+  --item-bg-hue: 210;
+  --item-bg-sat: 17%;
+  --item-bg-light: 98%;
+  --item-bg-color: hsl(
+    var(--item-bg-hue),
+    var(--item-bg-sat),
+    var(--item-bg-light)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: var(--font-family-main);
+  line-height: 1.1;
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 3.8rem auto;
+  padding: 0 3.2rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+
+.heading-primary > span {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+
+.heading-secondary {
+  border-bottom: 0.1rem solid var(--color-accent);
+  padding-bottom: 0.5rem;
+}
+
+.header__text {
+  max-width: 77rem;
+  margin: 1rem auto 0 auto;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.header__text-link:link,
+.header__text-link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(
+    var(--color-accent-hue),
+    var(--color-accent-sat),
+    var(--color-accent-light)
+  );
+  transition: color 200ms;
+}
+
+.header__text-link:hover,
+.header__text-link:active {
+  --color-accent-light: 50%;
+}
+
+.follow {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.follow-icons-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.follow-icons-box a img {
+  filter: drop-shadow(0 0 0.4px black);
+
+  transition: all 200ms;
+}
+
+.follow-icons-box a img:hover {
+  filter: drop-shadow(0 0 0.6px black);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.grid__item {
+  background-color: hsl(
+    var(--item-bg-hue),
+    var(--item-bg-sat),
+    var(--item-bg-light)
+  );
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 0 2.5rem 0.1rem rgba(0, 0, 0, 0.66);
+  transition: box-shadow 500ms;
+}
+
+.grid__item:hover {
+  box-shadow: 0 0 2.5rem 0.6rem rgba(0, 0, 0, 0.66);
+  animation: wobble 2s ease 0s infinite alternate backwards;
+}
+
+.grid__item-img-link {
+  position: relative;
+}
+
+.grid__item-img-link:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  background: -webkit-linear-gradient(
+    to right,
+    hsla(0, 0%, 26%, 0.2),
+    hsla(0, 0%, 0%, 0.2)
+  );
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 26%, 0.2),
+    hsla(0, 0%, 0%, 0.2)
+  );
+}
+
+.grid__item-content {
+  height: 13rem;
+  text-align: center;
+  padding: 1rem 1rem 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid__item-title {
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  color: var(--color-accent);
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grid__item-btn {
+  text-decoration: none;
+  font-family: var(--font-family-secondary);
+  font-size: inherit;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.live-btn {
+  background-color: #30334e;
+  color: white;
+}
+
+.github-btn {
+  background-color: #181717;
+  color: white;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+
+  30% {
+    transform: translateX(5px) rotate(1deg);
+  }
+
+  45% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  75% {
+    transform: translateX(-1.5px) rotate(-0.5deg);
+  }
+}
