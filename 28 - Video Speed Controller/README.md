@@ -4,7 +4,7 @@
 
 ##
 
-### ⚡ [Live](https://mosaif00.github.io/30-Days-JavaScript-Challenge/01-JS-Drum-Kit/index.htmldd)
+### ⚡ [Live](https://iosebkhe.github.io/Javascript30/28%20-%20Video%20Speed%20Controller/index.html)
 
 ## Follow Me
 

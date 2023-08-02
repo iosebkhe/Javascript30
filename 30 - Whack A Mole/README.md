@@ -4,7 +4,7 @@
 
 ##
 
-### ⚡ [Live](https://mosaif00.github.io/30-Days-JavaScript-Challenge/01-JS-Drum-Kit/index.htmldd)
+### ⚡ [Live](https://iosebkhe.github.io/Javascript30/30%20-%20Whack%20A%20Mole/index.html)
 
 ## Features I added to this challenge
 

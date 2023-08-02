@@ -4,7 +4,7 @@ This is my solutions for [JavaScript30](https://javascript30.com/) challenges fr
 
 ##
 
-### ⚡ [Live Showcase Here](https://iosebkhe.github.io/Javascript30-solutions/)
+### ⚡ [Live Showcase Here](https://iosebkhe.github.io/Javascript30/)
 
 ##
 

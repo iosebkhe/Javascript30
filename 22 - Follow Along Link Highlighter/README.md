@@ -4,7 +4,7 @@
 
 ##
 
-### ⚡ [Live](https://mosaif00.github.io/30-Days-JavaScript-Challenge/01-JS-Drum-Kit/index.htmldd)
+### ⚡ [Live](https://iosebkhe.github.io/Javascript30/22%20-%20Follow%20Along%20Link%20Highlighter/index.html)
 
 ## Follow Me
 

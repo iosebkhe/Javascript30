@@ -4,7 +4,7 @@
 
 ##
 
-### ⚡ [Live](https://mosaif00.github.io/30-Days-JavaScript-Challenge/01-JS-Drum-Kit/index.htmldd)
+### ⚡ [Live](https://iosebkhe.github.io/Javascript30/25%20-%20Event%20Capture,%20Propagation,%20Bubbling%20and%20Once/index.html)
 
 ## Follow Me
 

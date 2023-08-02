@@ -4,7 +4,7 @@
 
 ##
 
-### 🚀 [Live](https://mosaif00.github.io/30-Days-JavaScript-Challenge/01-JS-Drum-Kit/index.htmldd)
+### 🚀 [Live](https://iosebkhe.github.io/Javascript30/02%20-%20JS%20and%20CSS%20Clock/index.html)
 
 ## Follow Me
 
